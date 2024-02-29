@@ -4,36 +4,130 @@
     font-family: "Protest Strike", sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 body {
-    margin: auto;
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
-
-.navBar {
-    width: 100px;
-    height: 102%;
-    background-color: #2e4362;
-    margin-top: -16px;
-    margin-left: -8px;
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: #183451;
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
+    transition: width 0.3s ease;
+    z-index: 1000;
     align-items: center;
+    justify-content: flex-start;
 }
 
-.navBar a {
-    margin-top: 30px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    color: #1d202c;
+.navbar a {
+    color: #fff;
     text-decoration: none;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
-.page {
-    color: #ddedff !important;
-    text-decoration: underline !important;
+.navbar h1 {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #0056b3;
+}
+
+.navbar a.active {
+    background-color: #0056b3;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.content img {
+    width: 80%;
+    border: solid rgb(30, 30, 50) 5px;
+    border-radius: 10px;
+}
+
+.content h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+@keyframes couleurEspace {
+    0% {
+        color: #000000;
+    }
+
+    25% {
+        color: #080d25;
+    }
+
+    50% {
+        color: #223559;
+    }
+
+    75% {
+        color: #45629e;
+    }
+
+    100% {
+        color: #688dad;
+    }
+}
+
+.st {
+    color: linear-gradient(to right, #17143b 0%, #080d25 25%, #223559 50%, #45629e 75%, #688dad 100%);
+    animation: couleurEspace 5s infinite cubic-bezier(0.2, 0.8, 0.2, 0.8);
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 60px;
+    }
+
+    .navbar a span {
+        display: none;
+    }
+
+    .navbar a {
+        padding: 10px;
+    }
+
+    .navbar h1 {
+        display: none;
+    }
+
+    .content {
+        margin-left: 60px;
+    }
 }
