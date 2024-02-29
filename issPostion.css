@@ -70,6 +70,6 @@ body {
 }
 
 .issContent {
-    margin: auto;
     float: right;
+    width: 100%;
 }
