@@ -40,12 +40,6 @@ body {
     width: 100%;
     text-align: center;
     transition: background-color 0.3s ease;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar svg {
-    fill: #fff;
 }
 
 .navbar h1 {
@@ -71,69 +65,24 @@ body {
     transition: margin-left 0.3s ease;
 }
 
-.content img {
-    width: 80%;
-    border: solid rgb(30, 30, 50) 5px;
+
+.HommeContent {
+    background-color: #0056b3;
+    width: 220px;
+    height: 80px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border: solid;
+    cursor: pointer;
 }
 
-.content h1 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.content p {
-    color: #555;
-    margin-bottom: 20px;
-}
-
-
-@keyframes couleurEspace {
-    0% {
-        color: #000000;
-    }
-
-    25% {
-        color: #080d25;
-    }
-
-    50% {
-        color: #223559;
-    }
-
-    75% {
-        color: #45629e;
-    }
-
-    100% {
-        color: #688dad;
-    }
-}
-
-.st {
-    color: linear-gradient(to right, #17143b 0%, #080d25 25%, #223559 50%, #45629e 75%, #688dad 100%);
-    animation: couleurEspace 5s infinite cubic-bezier(0.2, 0.8, 0.2, 0.8);
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
-}
-
-@media screen and (max-width: 768px) {
-    .navbar {
-        width: 60px;
-    }
-
-    .navbar a span {
-        display: none;
-    }
-
-    .navbar a {
-        padding: 10px;
-    }
-
-    .navbar h1 {
-        display: none;
-    }
-
-    .content {
-        margin-left: 60px;
-    }
+#peopleContentList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
